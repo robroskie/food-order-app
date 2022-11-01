@@ -1,10 +1,13 @@
+import classes from './MealItem.module.css';
+
 const MealItem = (props) => {
   console.log(props.name);
   return (
-    <li>
+    <li className={classes.meal}>
       <div>
-        <h3>{props}</h3>
-        <h4>{props.description}</h4>
+        <h3>{props.name}</h3>
+        <div>{props.description}</div>
+        <div>{props.price}</div>
       </div>
     </li>
   );

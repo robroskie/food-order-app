@@ -30,12 +30,13 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map((meal) => <li>{meal.name}</li>);
+  const mealsList = DUMMY_MEALS.map((meal) => <MealItem key="{item}" name={meal.name} description={meal.description} price={meal.price}></MealItem>);
+  // console.log(mealsList[0].props.name);
   return (
   
     <section className={classes.meals}>
        <Card>
-        <MealItem>{mealsList}</MealItem>
+        <ul>{mealsList}</ul>
         </Card>
     </section>
 
